@@ -10,6 +10,10 @@
   ],
   "compilerOptions": {
     "strictNullChecks": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "types": [
         "./worker-configuration.d.ts",
         "node"

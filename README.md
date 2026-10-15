@@ -1,63 +1,25 @@
-# Astro Starter Kit: Blog
+# Kelowna 2026 Election Notes
 
-```sh
-pnpm create astro@latest -- --template blog
-```
+A small, independently written guide to candidates in Kelowna's 2026 municipal election. Built with Astro, MDX, and Tailwind CSS; pages render statically without client-side JavaScript.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Pages
 
-Features:
+- `/mayor/` — Mayoral candidates (TODO)
+- `/councillor/` — Councillor candidate notes
+- `/school-trustees/` — School trustee candidates (TODO)
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and Open Graph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+Page content lives in `src/pages/` as `.mdx` files. Shared layout and accessibility styles live in `src/layouts/SiteLayout.astro` and `src/styles/global.css`.
 
-## 🚀 Project Structure
+Set `SITE_URL` to the deployed site's canonical origin (for example, `https://your-domain.example`) in the build environment. Astro uses it for canonical/Open Graph URLs and the sitemap; when it is unset, the site avoids emitting incorrect `example.com` canonical metadata.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Commands
 
-```text
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
+Run commands from the project root:
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+| Command | Action |
+| --- | --- |
+| `pnpm dev` | Start Astro's local development server |
+| `pnpm build` | Build the site to `dist/` |
+| `pnpm preview` | Preview the production build locally |
+| `pnpm astro check` | Check Astro and TypeScript diagnostics |
+| `pnpm deploy` | Build and deploy to Cloudflare |
